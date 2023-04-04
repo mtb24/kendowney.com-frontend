@@ -12,9 +12,15 @@ module.exports = {
     title: `Ken Downey`,
     description: `Ken Downey's personal website`,
     author: `@mtb24`,
-    siteUrl: ``,
+    siteUrl: `https://kendowney.com`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        url: `https://kendowney.com/graphql`,
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
