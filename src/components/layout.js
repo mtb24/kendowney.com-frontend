@@ -10,6 +10,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import Nav from "./nav"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -22,9 +23,22 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const pageLinks = [
+    {
+      text: "Home",
+      url: "/",
+    },
+    {
+      text: "Page 2",
+      url: "page-2",
+    },
+    { text: "Blog", url: "blog" },
+  ]
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Nav links={pageLinks} />
       <div
         style={{
           margin: `0 auto`,
@@ -35,13 +49,11 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <footer
           style={{
-            marginTop: `var(--space-5)`,
+            margin: `var(--space-5) 0`,
             fontSize: `var(--font-sm)`,
           }}
         >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          © {new Date().getFullYear()} &middot; Ken Downey
         </footer>
       </div>
     </>

@@ -9,6 +9,7 @@ const Header = ({ siteTitle }) => (
       display: `flex`,
       alignItems: `center`,
       justifyContent: `space-between`,
+      backgroundColor: `var(--color-header-background)`,
     }}
   >
     <Link
