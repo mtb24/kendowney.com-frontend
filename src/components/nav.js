@@ -6,8 +6,8 @@ const Nav = ({links}) => {
         <nav>
             <ul>
                 {links.length && links.map(link => (
-                    <li>
-                        <Link to={link.url}>{link.text}</Link>
+                    <li key={link.title}>
+                        <Link to={link.uri}>{link.title}</Link>
                     </li>
                 ))}
             </ul>

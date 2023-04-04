@@ -14,48 +14,37 @@ import Nav from "./nav"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
+    query {
+      allWpPage {
+        nodes {
+          id
           title
+          uri
+        }
+      }
+      allSite {
+        nodes {
+          siteMetadata {
+            title
+          }
         }
       }
     }
   `)
 
-  const pageLinks = [
-    {
-      text: "Home",
-      url: "/",
-    },
-    {
-      text: "Page 2",
-      url: "page-2",
-    },
-    { text: "Blog", url: "blog" },
-  ]
-
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <Nav links={pageLinks} />
-      <div
+      <Header siteTitle={data.allSite.nodes[0]?.siteMetadata?.title || `Title`} />
+      <Nav links={data.allWpPage.nodes} />
+      <main>{children}</main>
+      <footer
         style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
+          margin: `var(--space-5) 0`,
+          fontSize: `var(--font-sm)`,
         }}
       >
-        <main>{children}</main>
-        <footer
-          style={{
-            margin: `var(--space-5) 0`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot; Ken Downey
-        </footer>
-      </div>
+        © {new Date().getFullYear()} &middot; Ken Downey
+      </footer>
     </>
   )
 }
