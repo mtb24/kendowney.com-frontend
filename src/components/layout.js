@@ -37,12 +37,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.allSite.nodes[0]?.siteMetadata?.title || `Title`} />
       <Nav links={data.allWpPage.nodes} />
       <main>{children}</main>
-      <footer
-        style={{
-          margin: `var(--space-5) 0`,
-          fontSize: `var(--font-sm)`,
-        }}
-      >
+      <footer>
         © {new Date().getFullYear()} &middot; Ken Downey
       </footer>
     </>
