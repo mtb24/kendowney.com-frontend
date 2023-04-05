@@ -16,7 +16,6 @@ const PageTemplate = props => (
     <Layout>
         <h1>{props.data.wpPage.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: props.data.wpPage.content }} />
-        <pre>{JSON.stringify(props, null, 2)}</pre>
     </Layout>
 )
 
