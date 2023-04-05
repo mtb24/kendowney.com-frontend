@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "kendowney.com-frontend",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "The frontend for my personal website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Ken Downey <ken@kendowney.com>",
   "dependencies": {
     "gatsby": "^5.8.1",
     "gatsby-plugin-image": "^3.8.0",
