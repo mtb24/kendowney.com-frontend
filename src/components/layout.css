@@ -36,7 +36,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  font: sans-serif;
+  font-family: var(--font-sans);
   font-size: var(--font-md);
   line-height: var(--line-height-normal);
 }
@@ -58,4 +58,10 @@ body {
 }
 *:after {
   box-sizing: inherit;
+}
+#gatsby-focus-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100dvh;
 }
