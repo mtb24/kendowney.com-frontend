@@ -16,7 +16,7 @@ export const query = graphql`
 const PageTemplate = props => (
     <Layout>
         <StyledHeading>{props.data.wpPage.title}</StyledHeading>
-        <StyledContentWrapper dangerouslySetInnerHTML={{ __html: props.data.wpPage.content }} />
+        <div dangerouslySetInnerHTML={{ __html: props.data.wpPage.content }} />
     </Layout>
 )
 
@@ -29,12 +29,6 @@ const StyledHeading = styled.h1`
     b {
         color: var(--color-primary);
     }
-`
-const StyledContentWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    min-height: 100dvh;
-    height: 100dvh;
 `
 
 /**
