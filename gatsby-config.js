@@ -18,7 +18,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: `https://kendowney.com/graphql`,
+        url: `https://www.kendowney.com/graphql`,
       },
     },
     `gatsby-plugin-image`,
@@ -43,6 +43,12 @@ module.exports = {
         theme_color: `#0047ab`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
       },
     },
   ],
