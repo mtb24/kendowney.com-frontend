@@ -2,9 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const Footer = () => (
-    <StyledFooter>
-        © {new Date().getFullYear()} &middot; Ken Downey
-    </StyledFooter>
+  <StyledFooter>© {new Date().getFullYear()} &middot; Ken Downey</StyledFooter>
 )
 
 const StyledFooter = styled.footer`

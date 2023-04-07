@@ -5,30 +5,30 @@ import Layout from "../components/layout"
 import styled from "styled-components"
 
 export const query = graphql`
-    query($id: String!) {
-        wpPage(id: { eq: $id }) {
-            title
-            content
-        }
+  query ($id: String!) {
+    wpPage(id: { eq: $id }) {
+      title
+      content
     }
+  }
 `
 
 const PageTemplate = props => (
-    <Layout>
-        <StyledHeading>{props.data.wpPage.title}</StyledHeading>
-        <div dangerouslySetInnerHTML={{ __html: props.data.wpPage.content }} />
-    </Layout>
+  <Layout>
+    <StyledHeading>{props.data.wpPage.title}</StyledHeading>
+    <div dangerouslySetInnerHTML={{ __html: props.data.wpPage.content }} />
+  </Layout>
 )
 
 const StyledHeading = styled.h1`
-    margin: 0;
-    padding: 0;
-    line-height: var(--line-height-dense);
-    letter-spacing: -0.01em;
+  margin: 0;
+  padding: 0;
+  line-height: var(--line-height-dense);
+  letter-spacing: -0.01em;
 
-    b {
-        color: var(--color-primary);
-    }
+  b {
+    color: var(--color-primary);
+  }
 `
 
 /**

@@ -28,7 +28,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.allSite.nodes[0]?.siteMetadata?.title || `Title`} />
+      <Header
+        siteTitle={data.allSite.nodes[0]?.siteMetadata?.title || `Title`}
+      />
       <Nav links={data.allWpPage.nodes} />
       <Main>{children}</Main>
       <Footer />
