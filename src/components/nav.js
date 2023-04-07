@@ -17,15 +17,16 @@ const Nav = ({links}) => {
 }
 
 const StyledNav = styled.nav`
+    margin: 0 0 var(--space-4) 0;
     ul {
         height: 2rem;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        margin: 0 0 var(--space-4) 0;
         list-style: none;
         background-color: #fff4db;
+        margin: 0;
 
         li {
             display: inline-block;
