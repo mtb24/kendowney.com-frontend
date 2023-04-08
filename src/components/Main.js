@@ -6,6 +6,7 @@ const Main = ({ children }) => <StyledMain>{children}</StyledMain>
 const StyledMain = styled.main`
   padding: var(--space-3) var(--space-2);
   overflow-y: scroll;
+  height: inherit;
 
   h1 {
     text-align: center;
