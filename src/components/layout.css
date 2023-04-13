@@ -33,14 +33,10 @@
   --size-gap: var(--space-6);
 }
 
-* {
-  box-sizing: inherit;
-}
-*:before {
-  box-sizing: inherit;
-}
+*,
+*:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
