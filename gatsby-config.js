@@ -15,13 +15,16 @@ module.exports = {
     siteUrl: `https://kendowney.com`,
   },
   plugins: [
+    `gatsby-plugin-netlify`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-wordpress`,
       options: {
         url: `https://www.kendowney.com/graphql`,
       },
     },
-    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -29,8 +32,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
