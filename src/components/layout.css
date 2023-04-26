@@ -59,6 +59,6 @@ body {
 #___gatsby > div {
   display: flex;
   flex-direction: column;
-  min-height: 100dvh;
-  height: 100dvh;
+  min-height: 100svh;
+  height: 100svh;
 }
