@@ -46,3 +46,9 @@ exports.onCreatePage = async ({ page, actions }) => {
     createPage(page)
   }
 }
+
+/* Runs before Gatsby does things */
+exports.onPreBootstrap = ({ store }, options) => {
+  // prints to terminal before browser loads
+  // console.log('onPreBootstrap', store, options)
+}
