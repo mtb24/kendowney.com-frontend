@@ -1,5 +1,5 @@
-import React from "react"
-import { action } from "@storybook/addon-actions"
+import React from 'react'
+import { action } from '@storybook/addon-actions'
 
 // Gatsby's Link overrides:
 // Gatsby Link calls the `enqueue` & `hovering` methods on the global variable ___loader.
@@ -10,19 +10,19 @@ global.___loader = {
   hovering: () => {},
 }
 // This global variable prevents the "__BASE_PATH__ is not defined" error inside Storybook.
-global.__BASE_PATH__ = "/"
+global.__BASE_PATH__ = '/'
 
 // Navigating through a gatsby app using gatsby-link or any other gatsby component will use the `___navigate` method.
 // In Storybook, it makes more sense to log an action than doing an actual navigate. Check out the actions addon docs for more info: https://storybook.js.org/docs/react/essentials/actions
 
 window.___navigate = pathname => {
-  action("NavigateTo:")(pathname)
+  action('NavigateTo:')(pathname)
 }
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
+    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,

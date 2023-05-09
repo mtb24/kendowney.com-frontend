@@ -1,13 +1,13 @@
-import React from "react"
+import React from 'react'
 import PropTypes from 'prop-types'
-import styled from "styled-components"
+import styled from 'styled-components'
 
-const Loading = ({theme}) => (
+const Loading = ({ theme }) => (
   <StyledContainer theme={theme}>
-    <div className="dot"></div>
-    <div className="dot"></div>
-    <div className="dot"></div>
-    <div className="dot"></div>
+    <div className='dot'></div>
+    <div className='dot'></div>
+    <div className='dot'></div>
+    <div className='dot'></div>
   </StyledContainer>
 )
 
@@ -28,7 +28,7 @@ const StyledContainer = styled.div`
     transform-origin: center top;
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       width: 100%;
       height: 25%;

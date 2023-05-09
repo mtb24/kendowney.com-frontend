@@ -1,12 +1,12 @@
-import * as React from "react"
+import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from "gatsby"
-import styled from "styled-components"
+import { Link } from 'gatsby'
+import styled from 'styled-components'
 
 const Header = ({ siteTitle }) => (
   <Header.Styled>
     <Link
-      to="/"
+      to='/'
       style={{
         fontSize: `var(--font-sm)`,
         textDecoration: `none`,
@@ -14,9 +14,7 @@ const Header = ({ siteTitle }) => (
     >
       {siteTitle}
     </Link>
-    <div>
-      &lt;K2 /&gt;
-    </div>
+    <div>&lt;K2 /&gt;</div>
   </Header.Styled>
 )
 
@@ -40,4 +38,3 @@ Header.defaultProps = {
 }
 
 export default Header
- 

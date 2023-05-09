@@ -1,5 +1,5 @@
-import React from "react"
-import Header from "../components/header"
+import React from 'react'
+import Header from '../components/header'
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 export default {
@@ -11,7 +11,7 @@ export default {
   },
 }
 
-const Template = (args) => <Header {...args} />
+const Template = args => <Header {...args} />
 
 export const HelloWorld = Template.bind({})
 HelloWorld.args = {
