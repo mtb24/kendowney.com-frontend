@@ -1,3 +1,4 @@
+import React from 'react'
 import Loading from '../components/loading'
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
