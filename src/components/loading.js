@@ -1,25 +1,26 @@
 import React from "react"
+import PropTypes from 'prop-types'
 import styled from "styled-components"
 
-const Loading = ({ theme = {} }) => (
-  <StyledLoading>
+const Loading = ({theme}) => (
+  <StyledContainer theme={theme}>
     <div className="dot"></div>
     <div className="dot"></div>
     <div className="dot"></div>
     <div className="dot"></div>
-  </StyledLoading>
+  </StyledContainer>
 )
 
-const StyledLoading = styled.div`
+const StyledContainer = styled.div`
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: ${theme?.width ?? "100px"};
-  height: ${theme?.height ?? "100px"};
+  width: ${props => props.theme.width};
+  height: ${props => props.theme.height};
 
   .dot {
-    postition: relative;
+    position: relative;
     display: flex;
     align-items: center;
     height: 100%;
@@ -32,7 +33,7 @@ const StyledLoading = styled.div`
       width: 100%;
       height: 25%;
       border-radius: 50%;
-      background-color: ${theme?.dotColor ?? "#0047ab"};
+      background-color: ${props => props.theme.dotColor};
     }
 
     &:first-child {
@@ -72,5 +73,20 @@ const StyledLoading = styled.div`
     }
   }
 `
+
+Loading.propTypes = {
+  /**
+   * String to display as the site title
+   */
+  theme: PropTypes.object,
+}
+
+Loading.defaultProps = {
+  theme: {
+    width: '100px',
+    height: '100px',
+    dotColor: 'cadetblue',
+  },
+}
 
 export default Loading
