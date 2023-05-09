@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 export const Header = ({ siteTitle }) => (
-  <StyledHeader>
+  <Header.Styled>
     <Link
       to="/"
       style={{
@@ -17,10 +17,10 @@ export const Header = ({ siteTitle }) => (
     <div>
       &lt;K2 /&gt;
     </div>
-  </StyledHeader>
+  </Header.Styled>
 )
 
-const StyledHeader = styled.header`
+Header.Styled = styled.header`
   padding: var(--space-4) var(--size-gutter);
   display: flex;
   align-items: center;
