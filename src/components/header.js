@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-export const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle }) => (
   <Header.Styled>
     <Link
       to="/"
@@ -38,3 +38,6 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: `Title missing...`,
 }
+
+export default Header
+ 
