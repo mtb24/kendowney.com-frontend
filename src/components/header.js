@@ -1,8 +1,9 @@
 import * as React from "react"
+import PropTypes from 'prop-types'
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-const Header = ({ siteTitle }) => (
+export const Header = ({ siteTitle }) => (
   <StyledHeader>
     <Link
       to="/"
@@ -27,4 +28,13 @@ const StyledHeader = styled.header`
   background-color: var(--color-header-background);
 `
 
-export default Header
+Header.propTypes = {
+  /**
+   * String to display as the site title
+   */
+  siteTitle: PropTypes.string.isRequired,
+}
+
+Header.defaultProps = {
+  siteTitle: `Title missing...`,
+}
