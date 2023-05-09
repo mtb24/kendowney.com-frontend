@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-const Header = ({ siteTitle }) => (
-  <Header.Styled>
+const SiteHeader = ({ siteTitle }) => (
+  <SiteHeader.Styled>
     <Link
       to='/'
       style={{
@@ -15,10 +15,10 @@ const Header = ({ siteTitle }) => (
       {siteTitle}
     </Link>
     <div>&lt;K2 /&gt;</div>
-  </Header.Styled>
+  </SiteHeader.Styled>
 )
 
-Header.Styled = styled.header`
+SiteHeader.Styled = styled.header`
   padding: var(--space-4) var(--size-gutter);
   display: flex;
   align-items: center;
@@ -26,15 +26,15 @@ Header.Styled = styled.header`
   background-color: var(--color-header-background);
 `
 
-Header.propTypes = {
+SiteHeader.propTypes = {
   /**
    * String to display as the site title
    */
   siteTitle: PropTypes.string.isRequired,
 }
 
-Header.defaultProps = {
+SiteHeader.defaultProps = {
   siteTitle: `Title missing...`,
 }
 
-export default Header
+export default SiteHeader

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Header from './header'
+import SiteHeader from './SiteHeader'
 import './layout.css'
 import Nav from './nav'
 import Main from './main'
@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header
+      <SiteHeader
         siteTitle={data.allSite.nodes[0]?.siteMetadata?.title || `Title`}
       />
       <Nav links={data.allWpPage.nodes} />
