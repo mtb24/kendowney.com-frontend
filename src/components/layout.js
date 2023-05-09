@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import SiteHeader from './SiteHeader'
-import './layout.css'
-import Nav from './nav'
-import Main from './main'
-import Footer from './footer'
+import './Layout.css'
+import Nav from './Nav'
+import Main from './Main'
+import Footer from './Footer'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

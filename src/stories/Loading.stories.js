@@ -1,7 +1,6 @@
 import React from 'react'
-import Loading from '../components/loading'
+import Loading from '../components/Loading'
 
-// More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 export default {
   title: 'Components/Loading',
   component: Loading,
