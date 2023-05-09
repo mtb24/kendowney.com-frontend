@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Seo from '../components/Seo'
-import Layout from '../components/Layout'
+import Seo from '/src/components/Seo'
+import Layout from '/src/components/Layout'
 import styled from 'styled-components'
 
 export const query = graphql`

@@ -1,5 +1,5 @@
 import React from 'react'
-import SiteHeader from '../components/SiteHeader'
+import SiteHeader from '/src/components/SiteHeader'
 
 export default {
   title: 'Components/Site Header',
