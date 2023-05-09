@@ -1,0 +1,64 @@
+:root {
+  --border-radius: 4px;
+  --color-text: #333;
+  --color-primary: #0047ab;
+  --color-secondary: #ffb511;
+  --color-code-bg: #fff4db;
+  --color-code: #8a6534;
+  --color-header-background: lightblue;
+  --color-palette-1: #0047ab;
+  --color-palette-2: #126fa4;
+  --color-palette-3: #b8ca83;
+  --color-palette-4: #d8ad30;
+  --color-palette-5: #e07755;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
+  --font-lg: 18px;
+  --font-md: 16px;
+  --font-sm: 14px;
+  --font-sx: 12px;
+  --line-height-loose: 1.75;
+  --line-height-normal: 1.5;
+  --line-height-dense: 1.1;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 64px;
+  --size-content: 54rem;
+  --size-gutter: var(--space-5);
+  --size-gap: var(--space-6);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--font-md);
+  font-weight: normal;
+  line-height: var(--line-height-normal);
+  margin: 0;
+  word-wrap: break-word;
+}
+
+#___gatsby > div {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  height: 100svh;
+}
